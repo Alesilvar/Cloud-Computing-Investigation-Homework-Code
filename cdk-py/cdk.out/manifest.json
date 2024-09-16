@@ -1,0 +1,221 @@
+{
+  "version": "36.0.25",
+  "artifacts": {
+    "cdk-ec2-stack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "cdk-ec2-stack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "cdk-ec2-stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://946144080964/us-east-1",
+      "properties": {
+        "templateFile": "cdk-ec2-stack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::946144080964:role/cdk-hnb659fds-deploy-role-946144080964-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::946144080964:role/cdk-hnb659fds-cfn-exec-role-946144080964-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-946144080964-us-east-1/c5d57adb04527f2c56e7644e2a902e652c8b682a3d086e149e8ebc1cec5c7d44.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "cdk-ec2-stack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::946144080964:role/cdk-hnb659fds-lookup-role-946144080964-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "cdk-ec2-stack.assets"
+      ],
+      "metadata": {
+        "/cdk-ec2-stack": [
+          {
+            "type": "aws:cdk:error",
+            "data": "Need to perform AWS calls for account 946144080964, but no credentials have been configured",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\elvis\\AppData\\Local\\Temp\\jsii-kernel-h21ydS\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:1608)",
+              "Annotations.addError (C:\\Users\\elvis\\AppData\\Local\\Temp\\jsii-kernel-h21ydS\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:1100)",
+              "ContextProvider.getValue (C:\\Users\\elvis\\AppData\\Local\\Temp\\jsii-kernel-h21ydS\\node_modules\\aws-cdk-lib\\core\\lib\\context-provider.js:2:1172)",
+              "get availabilityZones [as availabilityZones] (C:\\Users\\elvis\\AppData\\Local\\Temp\\jsii-kernel-h21ydS\\node_modules\\aws-cdk-lib\\core\\lib\\stack.js:1:10375)",
+              "new Vpc (C:\\Users\\elvis\\AppData\\Local\\Temp\\jsii-kernel-h21ydS\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:12717)",
+              "Kernel._Kernel_create (C:\\Users\\elvis\\AppData\\Local\\Temp\\tmp1zrw1y7t\\lib\\program.js:9127:25)",
+              "Kernel.create (C:\\Users\\elvis\\AppData\\Local\\Temp\\tmp1zrw1y7t\\lib\\program.js:8798:93)",
+              "KernelHost.processRequest (C:\\Users\\elvis\\AppData\\Local\\Temp\\tmp1zrw1y7t\\lib\\program.js:10715:36)",
+              "KernelHost.run (C:\\Users\\elvis\\AppData\\Local\\Temp\\tmp1zrw1y7t\\lib\\program.js:10675:22)",
+              "Immediate._onImmediate (C:\\Users\\elvis\\AppData\\Local\\Temp\\tmp1zrw1y7t\\lib\\program.js:10676:46)",
+              "process.processImmediate (node:internal/timers:483:21)"
+            ]
+          }
+        ],
+        "/cdk-ec2-stack/MyVpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcF9F0CA6F"
+          }
+        ],
+        "/cdk-ec2-stack/MyVpc/public-subnet-1Subnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcpublicsubnet1Subnet1SubnetB342DAEA"
+          }
+        ],
+        "/cdk-ec2-stack/MyVpc/public-subnet-1Subnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcpublicsubnet1Subnet1RouteTable6ED9DE4D"
+          }
+        ],
+        "/cdk-ec2-stack/MyVpc/public-subnet-1Subnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcpublicsubnet1Subnet1RouteTableAssociation2D492E70"
+          }
+        ],
+        "/cdk-ec2-stack/MyVpc/public-subnet-1Subnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcpublicsubnet1Subnet1DefaultRoute9372778D"
+          }
+        ],
+        "/cdk-ec2-stack/MyVpc/public-subnet-1Subnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcpublicsubnet1Subnet2SubnetA15F55D6"
+          }
+        ],
+        "/cdk-ec2-stack/MyVpc/public-subnet-1Subnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcpublicsubnet1Subnet2RouteTable7849C9FE"
+          }
+        ],
+        "/cdk-ec2-stack/MyVpc/public-subnet-1Subnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcpublicsubnet1Subnet2RouteTableAssociation61069E05"
+          }
+        ],
+        "/cdk-ec2-stack/MyVpc/public-subnet-1Subnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcpublicsubnet1Subnet2DefaultRoute6DF07316"
+          }
+        ],
+        "/cdk-ec2-stack/MyVpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcIGW5C4A4F63"
+          }
+        ],
+        "/cdk-ec2-stack/MyVpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcVPCGW488ACE0D"
+          }
+        ],
+        "/cdk-ec2-stack/MyVpc/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyVpcRestrictDefaultSecurityGroupCustomResourceA4FCCD62"
+          }
+        ],
+        "/cdk-ec2-stack/Custom::VpcRestrictDefaultSGCustomResourceProvider": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+            "data": true
+          }
+        ],
+        "/cdk-ec2-stack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+          }
+        ],
+        "/cdk-ec2-stack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E"
+          }
+        ],
+        "/cdk-ec2-stack/MySecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MySecurityGroupAC8D442C"
+          }
+        ],
+        "/cdk-ec2-stack/MyInstance/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyInstanceInstanceRole1C4D4747"
+          }
+        ],
+        "/cdk-ec2-stack/MyInstance/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyInstanceInstanceProfile2784C631"
+          }
+        ],
+        "/cdk-ec2-stack/MyInstance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyInstanceA12EC128"
+          }
+        ],
+        "/cdk-ec2-stack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--al2023-ami-kernel-6.1-x86_64:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestal2023amikernel61x8664C96584B6F00A464EAD1953AFF4B05118Parameter"
+          }
+        ],
+        "/cdk-ec2-stack/InstanceId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceId"
+          }
+        ],
+        "/cdk-ec2-stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/cdk-ec2-stack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/cdk-ec2-stack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "cdk-ec2-stack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  },
+  "missing": [
+    {
+      "key": "availability-zones:account=946144080964:region=us-east-1",
+      "provider": "availability-zones",
+      "props": {
+        "account": "946144080964",
+        "region": "us-east-1",
+        "lookupRoleArn": "arn:${AWS::Partition}:iam::946144080964:role/cdk-hnb659fds-lookup-role-946144080964-us-east-1"
+      }
+    }
+  ]
+}
